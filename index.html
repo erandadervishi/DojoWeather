@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="blue_bg text_white">
+        <div class="container">
+            <div class="d_flex justify_between p_20 align_center">
+                <h1>DojoWeather</h1>
+                <nav>
+                    <ul class="d_flex">
+                        <li><a onclick="showAlert()" class="city" href="#">Burbank</a></li>
+                        <li><a onclick="showAlert()" class="city" href="#">Chicago</a></li>
+                        <li><a onclick="showAlert()" class="city" href="#">Dallas</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="d_flex justify_between align_center p_20 b_bott">
+                <h2>San Jose</h2>
+                <div class="d_flex align_center">
+                    <p>show temperature in</p>
+                    <select onchange="tempFromCtoF()" class="ml_15" name="temp" id="temp">
+                        <option value="celsius">°C</option>
+                        <option value="fahrenheit">°F</option>
+                    </select>
+                </div>
+            </div>
+            <div class="d_flex gap_30 mt_20 justify_between">
+                <div class="boxes">
+                    <h3>Today</h3>
+                    <img class="img_bg" src="assets/some_rain.png" alt="rain">
+                    <h5>some rain</h5>
+                    <div class="d_flex justify_between mt_20">
+                        <h4 class="red flex_1">24°</h4>
+                        <h4 class="blue flex_1">18°</h4>
+                    </div>
+                </div>
+                <div class="boxes">
+                    <h3>Tomorrow</h3>
+                    <img class="img_bg" src="assets/some_sun.png" alt="sun">
+                    <h5>some sun</h5>
+                    <div class="d_flex justify_between mt_20">
+                        <h4 class="red flex_1">27°</h4>
+                        <h4 class="blue flex_1">19°</h4>
+                    </div>
+                </div>
+                <div class="boxes">
+                    <h3>Friday</h3>
+                    <img class="img_bg" src="assets/some_clouds.png" alt="clouds">
+                    <h5>some clouds</h5>
+                    <div class="d_flex justify_between mt_20">
+                        <h4 class="red flex_1">21°</h4>
+                        <h4 class="blue flex_1">16°</h4>
+                    </div>
+                </div>
+                <div class="boxes">
+                    <h3>Saturday</h3>
+                    <img class="img_bg" src="assets/some_sun.png" alt="sun">
+                    <h5>some sun</h5>
+                    <div class="d_flex justify_between mt_20">
+                        <h4 class="red flex_1">26°</h4>
+                        <h4 class="blue flex_1">21°</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="d_flex justify_between cookie_box align_center">
+                <div class="d_flex align_center flex_3">
+                    <img class="cookie" src="assets/cookie.png" alt="cookie">
+                    <div class="p_20">
+                        <h4>Stop! Cookie time</h4>
+                        <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyze our site traffic. <a href="#">Read more...</a></p>
+                    </div>
+                </div>
+                <div class="flex_1 txt_center">
+                    <button onclick="removeCookie()" href="#" class="btn">I Accept</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
